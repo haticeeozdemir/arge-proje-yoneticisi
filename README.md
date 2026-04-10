@@ -1,16 +1,40 @@
-# React + Vite
+# ArGe Proje Yöneticisi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TÜBİTAK proje başvuru formlarını otomatik dolduran, yerel AI destekli uygulama.
 
-Currently, two official plugins are available:
+## Ne Yapıyor?
+- PDF belgesi (FPP) yüklersin
+- Her form alanı için "Oluştur" butonuna basarsın
+- Yerel AI modeli belgeyi okuyup alanı Türkçe doldurur
+- İnternet bağlantısı gerekmez, her şey bilgisayarında çalışır
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Kurulum
 
-## React Compiler
+### 1. Ollama Kur
+https://ollama.com adresinden indir ve kur.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Modeli İndir
+```bash
+ollama pull gemma3:4b
+```
 
-## Expanding the ESLint configuration
+### 3. Ollama'yı Başlat
+```bash
+OLLAMA_ORIGINS=* ollama serve
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Projeyi Klonla
+```bash
+git clone https://github.com/haticeeozdemir/arge-proje-yoneticisi.git
+cd arge-proje-yoneticisi
+npm install
+npm run dev
+```
+
+### 5. Tarayıcıda Aç
+http://localhost:5173
+
+## Kullanım
+1. Knowledge Base bölümünden PDF yükle
+2. Her alanın altındaki "Oluştur" butonuna bas
+3. AI alanı otomatik doldurur
