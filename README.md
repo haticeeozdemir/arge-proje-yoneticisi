@@ -14,22 +14,23 @@ TÜBİTAK proje başvuru formlarını otomatik dolduran, yerel AI destekli uygul
 https://ollama.com adresinden indir ve kur.
 
 ### 2. Modeli İndir
-```bash
-ollama pull gemma3:4b
-```
 
-### 3. Ollama'yı Başlat
-```bash
+ollama pull mistral
+
+
+### 3. Ollama'yı Başlat (CORS açık)
+
 OLLAMA_ORIGINS=* ollama serve
-```
+
+Bu terminali açık bırak
 
 ### 4. Projeyi Klonla
-```bash
+
 git clone https://github.com/haticeeozdemir/arge-proje-yoneticisi.git
 cd arge-proje-yoneticisi
 npm install
 npm run dev
-```
+
 
 ### 5. Tarayıcıda Aç
 http://localhost:5173

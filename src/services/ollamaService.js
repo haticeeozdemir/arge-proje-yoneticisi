@@ -1,5 +1,5 @@
 const OLLAMA_URL = 'http://localhost:11434/api/generate';
-const MODEL = 'gemma:2b';
+const MODEL = 'mistral';
 
 export const callOllama = async (prompt) => {
   const response = await fetch(OLLAMA_URL, {
